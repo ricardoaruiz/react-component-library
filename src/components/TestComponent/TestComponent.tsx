@@ -1,12 +1,12 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
-import theme from '../styles/theme'
+import theme from 'styles/theme'
 import { TestComponentProps } from './TestComponent.types'
 
 import * as S from './TestComponent.style'
 
-const TestComponent: React.FC<TestComponentProps> = ({
+export const TestComponent: React.FC<TestComponentProps> = ({
     variant = 'primary',
     title,
     subtitle

@@ -7,6 +7,12 @@ import { TestComponentProps } from './TestComponent.types'
 export default {
     title: 'TestComponent',
     component: TestComponent,
+    parameters: {
+        layout: 'fullscreen',
+        backgrounds: {
+            default: 'light'
+        }
+    },
     args: {
         variant: 'primary',
         title: 'This is the title',

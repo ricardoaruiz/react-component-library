@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
-import theme from '../styles/theme'
+import theme from '../../styles/theme'
 import TestComponent from './TestComponent'
 import { TestComponentProps } from './TestComponent.types'
 

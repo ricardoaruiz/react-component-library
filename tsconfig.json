@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "rootDir": "src",
     "declaration": true,
     "declarationDir": "build",

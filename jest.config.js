@@ -1,6 +1,6 @@
 module.exports = {
     roots: ['src'],
-    setupFilesAfterEnv: ['./jest.setup.ts'],
+    setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
     moduleFileExtensions: ['ts', 'tsx', 'js'],
     testPathIgnorePatterns: ['node_modules/'],
     transform: {
@@ -12,5 +12,16 @@ module.exports = {
         '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
             'identity-obj-proxy',
         '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
-    }
+    },
+    modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
+    collectCoverage: true,
+    collectCoverageFrom: [
+        'src/**/*.ts(x)?',
+        '!src/**/*stories.tsx',
+        '!src/components/**/index.ts',
+        '!src/templates/**/index.ts',
+        '!src/pages/**/*.tsx',
+        '!src/styles/**/*.ts',
+        '!**/*.d.ts'
+    ]
 }
