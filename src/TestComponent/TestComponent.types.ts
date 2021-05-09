@@ -1,3 +1,5 @@
 export interface TestComponentProps {
-    theme: 'primary' | 'secondary'
+    variant?: 'primary' | 'secondary'
+    title: string
+    subtitle: string
 }

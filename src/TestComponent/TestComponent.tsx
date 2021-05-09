@@ -2,16 +2,17 @@ import React from 'react'
 
 import { TestComponentProps } from './TestComponent.types'
 
-import './TestComponent.scss'
+import * as S from './TestComponent.style'
 
-const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
-    <div
-        data-testid="test-component"
-        className={`test-component test-component-${theme}`}
-    >
-        <h1 className="heading">Im the test component</h1>
-        <h2>Made with love by Harvey</h2>
-    </div>
+const TestComponent: React.FC<TestComponentProps> = ({
+    variant = 'primary',
+    title,
+    subtitle
+}) => (
+    <S.Wrapper variant={variant}>
+        <S.Title>{title}</S.Title>
+        <S.Subtitle>{subtitle}</S.Subtitle>
+    </S.Wrapper>
 )
 
 export default TestComponent
