@@ -1,6 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
+import theme from '../styles/theme'
 import TestComponent from './TestComponent'
 import { TestComponentProps } from './TestComponent.types'
 
@@ -27,7 +28,7 @@ describe('Test Component', () => {
         )
 
         expect(container.firstChild).toHaveStyle({
-            'background-color': '#e0e0e0'
+            'background-color': theme.colors.white
         })
     })
 
@@ -37,8 +38,8 @@ describe('Test Component', () => {
         )
 
         expect(container.firstChild).toHaveStyle({
-            'background-color': '#131111',
-            color: '#e0e0e0'
+            'background-color': theme.colors.black,
+            color: theme.colors.white
         })
     })
 })
