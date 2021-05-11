@@ -1,7 +1,6 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
 
-import theme from 'styles/theme'
+import { Base } from 'components/Base'
 import { TestComponentProps } from './TestComponent.types'
 
 import * as S from './TestComponent.style'
@@ -11,12 +10,12 @@ export const TestComponent: React.FC<TestComponentProps> = ({
     title,
     subtitle
 }) => (
-    <ThemeProvider theme={theme}>
+    <Base>
         <S.Wrapper variant={variant}>
             <S.Title>{title}</S.Title>
             <S.Subtitle>{subtitle}</S.Subtitle>
         </S.Wrapper>
-    </ThemeProvider>
+    </Base>
 )
 
 export default TestComponent
